@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+    <form class="needs-validation" action="/foods/<%=food._id%>?_method=PUT"   method="post" novalidate>
+          <div>  
+            <label  for="name">Name</label>
+            <input value="<%=food.name%>" type="text"  id="name" name="food[name]" required>
+          </div>
+          <div>  
+            <label  for="veg">Veg or Non Veg</label>
+            <select name="food[veg]" id="veg">
+                  <option value="Both">Both</option>
+                  <option value="veg">veg</option>
+                  <option value="non-veg">non-veg</option>
+            </select>
+          </div>
+          <div>  
+            <label  for="description">Description</label>
+            <input  type="text" value="<%=food.description%>"  id="description" name="food[description]" required>
+          </div>
+          <div>  
+            <label  for="location">location</label>
+            <input  type="text"  id="location" value="<%=food.location%>" name="food[location]" required>
+          </div>
+          <div>  
+            <label  for="distance">distance</label>
+            <input  type="text"  id="distance" name="food[distance]" value="<%=food.distance%>" required>
+          </div>
+          <div>  
+            <label  for="useByDate">useByDate</label>
+            <input  type="text"  id="useByDate" name="food[useByDate]" value="<%=food.useByDate%>" required>
+          </div>
+          <div>  
+            <label  for="image">image</label>
+            <input value="<%=food.image%>"  type="text"  id="image" name="food[image]" required>
+          </div>
+
+
+        <button class="btn btn-success">Update Food</button>
+        </div>
+    </form>
+
+
+</body>
+</html>
